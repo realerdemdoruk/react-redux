@@ -6,12 +6,16 @@ export const Themes = () => {
   const dispatch = useDispatch();
   return (
     <div style={tema}>
-      <button onClick={() => dispatch(Actions.temaAksiyon.koyu_tema())}>
-        Koyu Tema
-      </button>
-      <button onClick={() => dispatch(Actions.temaAksiyon.acik_tema())}>
+        <button style={tema.button} onClick={() => dispatch(Actions.temaAksiyon.acik_tema())}>
         Açık Tema
       </button>
+      <button style={tema.button} onClick={() => dispatch(Actions.temaAksiyon.varsayilan_tema())}>
+        Varsayılan Tema
+      </button>
+      <button style={tema.button} onClick={() => dispatch(Actions.temaAksiyon.koyu_tema())}>
+        Koyu Tema
+      </button>
+   
     </div>
   );
 };
